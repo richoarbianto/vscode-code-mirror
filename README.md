@@ -37,8 +37,8 @@ Code Mirror is a VS Code extension that mirrors content from a source file to yo
 
 ## Contributing
 
-If you have any suggestions or improvements, feel free to open an issue or submit a pull request on [GitHub](https://github.com/your-username/your-repository).
+If you have any suggestions or improvements, feel free to open an issue or submit a pull request on [GitHub](https://github.com/richoarbianto/vscode-code-mirror).
 
 ## License
 
-This extension is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
+This extension is licensed under the MIT License.

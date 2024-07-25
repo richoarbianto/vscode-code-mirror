@@ -1,0 +1,51 @@
+{
+  "name": "code-mirror",
+  "displayName": "Code Mirror",
+  "description": "Code Mirror is a VS Code extension that mirrors content from a source file to your target file while you type. It's ideal for creating coding videos and reels where you want to replicate code dynamically.\n\n### Features:\n- **Select Source File**: Choose a file from which content will be mirrored to the active editor.\n- **Start Mirroring**: Begin mirroring content from the selected source file as you type.\n- **Stop Mirroring**: Stop mirroring content and reset the extension's state. The status bar button allows you to quickly restart mirroring if needed.\n- **Status Bar Integration**: Easily start and stop mirroring using a status bar item with clear indicators and tooltips.\n\n### Commands:\n- **Code Mirror: Select Source File**\n  Opens a dialog to select the source file for mirroring. The content of the source file will be loaded and displayed in the status bar to inform you that mirroring has started.\n- **Code Mirror: Stop Mirroring**\n  Stops the mirroring process and updates the status bar to indicate that mirroring has stopped. Click the status bar button to start mirroring again.\n\n### How It Works:\n1. **Select Source File**: Use the command to pick the source file. The content of this file will be loaded and ready to mirror.\n2. **Mirroring Content**: As you type in the target file, the content from the source file will be mirrored in real-time, adjusting the target file's content to match the source.\n3. **Stop Mirroring**: If you want to stop mirroring, use the stop command or click the status bar button. You can restart mirroring at any time by selecting a new source file.\n\n### Usage:\n- Click on the status bar item to select the source file and start mirroring.\n- Use the command palette (Ctrl+Shift+P) to access the commands for selecting the source file or stopping mirroring.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.selectSourceFile",
+    "onCommand:extension.stopMirroring"
+  ],
+  "icon": "logo.png",
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.selectSourceFile",
+        "title": "Select Source File",
+        "category": "Code Mirror"
+    },
+    {
+      "command": "extension.stopMirroring",
+      "title": "Code Mirror: Stop Mirroring",
+      "category": "Code Mirror"
+    }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.91.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}

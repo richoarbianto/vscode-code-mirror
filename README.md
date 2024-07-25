@@ -1,4 +1,5 @@
 # Code Mirror
+<center><img src="logo.png" width=200px></img></center>
 
 Code Mirror is a VS Code extension that mirrors content from a source file to your target file while you type. It's ideal for creating coding videos and reels where you want to replicate code dynamically.
 
